@@ -504,3 +504,45 @@ footer { padding: 25px 0; background: var(--ink); color: #9ea5a7; border-top: 1p
   }
 }
 
+
+@media screen and (max-width: 640px) {
+  .section-layout {
+    display: block !important;
+    grid-template-columns: none !important;
+    width: 100%;
+  }
+
+  .section-label {
+    position: static !important;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .section-layout > div,
+  .research-list {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .research-item,
+  .research-item + .research-item {
+    display: block !important;
+    grid-template-columns: none !important;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .research-index {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .research-item h3,
+  .research-item p {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+}
