@@ -51,11 +51,14 @@ a:hover { color: var(--accent); }
   border-bottom: 1px solid var(--line); 
 }
 
-.hero-layout { 
-  display: grid; 
-  grid-template-columns: minmax(0, 1.55fr) minmax(280px, .65fr); 
-  gap: 90px; 
-  align-items: end; 
+.hero-layout {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1.35fr) minmax(250px, 0.65fr);
+  gap: 52px;
+  align-items: start;
+}
+.hero-photo {
+  padding-top: 34px;
 }
 
 .kicker, .meta {
@@ -103,8 +106,9 @@ h1 {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
-  margin: 0 0 30px auto;
+  border: 1px solid var(--line);
 }
+
 
 .hero-side dl { 
   margin: 0; 
@@ -181,33 +185,37 @@ time { color: var(--accent-dark); font-size: .82rem; font-weight: 800; }
 footer { padding: 25px 0; background: var(--ink); color: #9ea5a7; border-top: 1px solid #313b43; font-size: .78rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
 
-@media (max-width: 850px) {
-  .menu-button { display: block; }
-  .site-nav { display: none; position: absolute; left: 0; right: 0; top: 66px; padding: 24px; flex-direction: column; align-items: flex-start; background: var(--paper); border-bottom: 1px solid var(--line); }
-  .site-nav.open { display: flex; }
-  .hero-layout { grid-template-columns: 1fr; gap: 55px; }
-  .section-layout { grid-template-columns: 1fr; gap: 44px; }
-  .section-label { position: static; display: flex; align-items: baseline; gap: 14px; }
-  .methods-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 560px) {
-  body { font-size: 16px; }
-
-  .container {
-    width: min(calc(100% - 30px), var(--max));
+@media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 145px minmax(0, 1fr);
+    gap: 34px;
   }
 
-  .hero {
-    padding: 68px 0 60px;
-  }
-
-  h1 {
-    font-size: 3rem;
-    line-height: 0.98;
+  .hero-side {
+    grid-column: 2;
   }
 
   .profile-photo {
-    width: 190px;
-    margin: 0 0 26px;
+    max-width: 145px;
   }
+}
+
+@media (max-width: 560px) {
+  .hero-layout {
+    display: block;
+  }
+
+  .hero-photo {
+    padding-top: 0;
+    margin-bottom: 28px;
+  }
+
+  .profile-photo {
+    width: 135px;
+    height: 168px;
+  }
+
+  .hero-side {
+    margin-top: 40px;
+  }
+}
