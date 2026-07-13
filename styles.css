@@ -53,12 +53,23 @@ a:hover { color: var(--accent); }
 
 .hero-layout {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1.35fr) minmax(250px, 0.65fr);
-  gap: 52px;
+  grid-template-columns: 240px minmax(0, 1.1fr) minmax(320px, 0.85fr);
+  gap: 58px;
   align-items: start;
 }
+
 .hero-photo {
-  padding-top: 34px;
+  padding-top: 26px;
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--line);
 }
 
 .kicker, .meta {
@@ -87,7 +98,7 @@ h1 {
 }
 
 .hero-statement { 
-  max-width: 750px; 
+  max-width: 620px; 
   margin: 0; 
   font-family: Georgia, "Times New Roman", serif; 
   font-size: clamp(1.55rem, 2.8vw, 2.35rem); 
@@ -97,16 +108,6 @@ h1 {
 .hero-side > p { 
   margin: 0 0 34px; 
   color: var(--muted); 
-}
-
-.profile-photo {
-  display: block;
-  width: 100%;
-  max-width: 230px;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
-  border: 1px solid var(--line);
 }
 
 
@@ -185,18 +186,14 @@ time { color: var(--accent-dark); font-size: .82rem; font-weight: 800; }
 footer { padding: 25px 0; background: var(--ink); color: #9ea5a7; border-top: 1px solid #313b43; font-size: .78rem; }
 .footer-inner { display: flex; justify-content: space-between; gap: 24px; }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .hero-layout {
-    grid-template-columns: 145px minmax(0, 1fr);
-    gap: 34px;
-  }
-
-  .hero-side {
-    grid-column: 2;
+    grid-template-columns: 200px minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 38px;
   }
 
   .profile-photo {
-    max-width: 145px;
+    max-width: 200px;
   }
 }
 
