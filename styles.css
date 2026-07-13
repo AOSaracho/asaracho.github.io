@@ -76,9 +76,9 @@ h1, h2, .research-item h3 {
 }
 
 h1 {
-  margin-bottom: 28px;
-  font-size: clamp(2.8rem, 6vw, 4.75rem);
-  line-height: 1;
+  margin-bottom: 24px;
+  font-size: clamp(2.6rem, 4.8vw, 3.9rem);
+  line-height: 0.96;
   letter-spacing: -0.035em;
   font-weight: 400;
 }
@@ -94,6 +94,16 @@ h1 {
 .hero-side > p { 
   margin: 0 0 34px; 
   color: var(--muted); 
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  margin: 0 0 30px auto;
 }
 
 .hero-side dl { 
