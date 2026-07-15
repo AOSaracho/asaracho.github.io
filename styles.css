@@ -629,3 +629,16 @@ footer { padding: 25px 0; background: var(--ink); color: #9ea5a7; border-top: 1p
     pointer-events: auto;
   }
 }
+
+/* UPDATED NAV: supports the added Policy and Methods links without changing the desktop design */
+.site-nav {
+  gap: 22px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1120px) {
+  .site-nav {
+    gap: 18px;
+    font-size: .8rem;
+  }
+}
